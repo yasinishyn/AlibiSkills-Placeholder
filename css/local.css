@@ -1,0 +1,200 @@
+@font-face {
+  font-family: MuseoSansCyrl-300;
+  src: url(fonts/MuseoSansCyrl-300.otf);
+}
+@font-face {
+  font-family: MuseoSansCyrl-500;
+  src: url(fonts/MuseoSansCyrl-500.otf);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style: none;
+  display: inline-block;
+}
+.vert_center {
+  display: flex;
+  justify-content: center;
+}
+#footer {
+  flex: 0 0 100px;
+  background-color: #4D4D4D;
+  padding: 20px 0;
+}
+
+#footer .footer_social_container {
+  padding-top: 10px;
+}
+.social {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  margin: 5px;
+}
+.fb {
+  background: url("../img/facebook_icon2.png");
+}
+.fb:hover {
+  background: url("../img/facebook_icon1.png");
+}
+.tw {
+  background: url("../img/twitter_icon2.png");
+}
+.tw:hover {
+  background: url("../img/twitter_icon1.png");
+}
+.gp {
+  background: url("../img/G+_icon2.png");
+}
+.gp:hover {
+  background: url("../img/G+_icon1.png");
+}
+.yt {
+  background: url("../img/youtube_icon2.png");
+}
+.yt: hover {
+  background: url("../img/youtube_icon1.png");
+}
+.logo img {
+  max-width: 100%;
+}
+.top_banner {
+  background-image: url('../img/back1.png');
+  flex: 1 1 0;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.top_header {
+  position: absolute;
+  top: 10px;
+  z-index: 9999;
+  width: 100%;
+  left: 0;
+  top: 0;
+  padding: 15px 0;
+}
+.blue_button, .blue_button:visited {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: 1px solid #00BDD9;
+  color: #00BDD9;
+  border-radius: 50px;
+  padding: 3px 35px;
+  min-width: 200px;
+  font-size: 25px;
+  font-family: "MuseoSansCyrl-300";
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+.blue_button:hover, .blue_button:active, .blue_button:focus {
+  text-decoration: none;
+  background-color: #00BDD9;
+  color: #fff;
+  border: 1px solid #00BDD9;
+}
+.reg_popup {
+  font-family: "MuseoSansCyrl-500";
+  margin: auto;
+  flex: 0 1 600px;
+}
+.reg_popup_inner {
+  width: 100%;
+  background-color: #F5F5F5;
+  padding: 2em 4em;
+}
+.who_reg_item {
+  text-align: center;
+}
+.who_reg {
+  display: flex;
+  align-items: center;
+}
+
+#i_student, #i_teacher {
+  width: 117px;
+  height: 117px;
+  max-width: 100%;
+  background-repeat: no-repeat;
+}
+#i_student {
+  background-image: url("../img/reg_stud.png");
+  background-size: 100%;
+  background-position: center;
+}
+#i_student.selected {
+  background-image: url("../img/reg_stud_selected.png");
+  background-size: 100%;
+  background-position: center;
+}
+#i_teacher {
+  background-image: url("../img/reg_teacher.png");
+  background-size: 100%;
+  background-position: center;
+}
+#i_teacher.selected {
+  background-image: url("../img/reg_teacher_selected.png");
+  background-size: 100%;
+  background-position: center;
+}
+.reg_log_input {
+  background-color: #FFF;
+  border: none;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 15px;
+  font-size: 17px;
+  font-family: "MuseoSansCyrl-300";
+  outline: none;
+}
+.reg_log_button_submit {
+  margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+  #footer .footer_social_container .social {
+    width: 42px;
+    height: 42px;
+  }
+  #footer img {
+    margin: 0 auto;
+    display: block;
+  }
+  #footer .footer_social_container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .reg_popup_inner {
+    padding: 2em;
+  }
+  .hide_mobile {
+    display: none;
+  }
+  .who_reg_item {
+    width: 50%;
+  }
+
+  #i_student, #i_teacher {
+      margin: 0 auto;
+  }
+}
