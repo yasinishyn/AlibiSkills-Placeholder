@@ -73,8 +73,6 @@ ul li {
 .top_banner {
   background-image: url('../img/back1.png');
   flex: 1 1 0;
-  padding-top: 70px;
-  padding-bottom: 30px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -118,6 +116,10 @@ ul li {
   width: 100%;
   background-color: #F5F5F5;
   padding: 2em 4em;
+  min-height: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .user-info .row.notification {
   min-height: 70px;
@@ -171,6 +173,7 @@ ul li {
   font-size: 17px;
   font-family: "MuseoSansCyrl-300";
   outline: none;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
 }
 .reg_log_button_submit {
   margin-top: 15px;
