@@ -20,32 +20,31 @@
     </header>
     <div class="top_banner">
       <div class="reg_popup" style="display: block;">
-        <div class="reg_popup_inner">
+        <form class="user-info">
 
           <div class="who_reg row">
             <div class="col-xs-4 who_reg_item">
-              <div id="i_student" class="selected">
-              </div>
+              <div id="i_student" class="selected"></div>
             </div>
             <div class="col-xs-4 who_reg_item hide_mobile">
               <h2 class="who_are">Кто Ты</h2>
             </div>
             <div class="col-xs-4 who_reg_item">
-              <div id="i_teacher">
-              </div>
+              <div id="i_teacher"></div>
             </div>
           </div>
 
           <div class="row">
+            <input type="text" name="entry.340286705" value="student" hidden>
             <div class="col-xs-12 col-sm-6">
-              <input type="text" placeholder="Name" class="reg_log_input">
+              <input type="text" required placeholder="Name" name="entry.90471835" class="reg_log_input">
             </div>
             <div class="col-xs-12 col-sm-6">
-              <input type="email" placeholder="Email" class="reg_log_input">
+              <input type="email" required placeholder="Email" name="entry.1962057131" class="reg_log_input">
             </div>
           </div>
 
-          <div class="row">
+          <div class="row notification">
             <h4 class="col-xs-offset-1 col-xs-10 text-center">
               Будьте первым оповещены о выходе релиза Alibi Skills
             </h4>
@@ -53,10 +52,10 @@
 
           <div class="row">
             <div class="text-center">
-              <a id="submit-sheet" href="#" class="blue_button">Присоединиться</a>
+              <button type="submit" class="blue_button">Присоединиться</button>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <footer id="footer">

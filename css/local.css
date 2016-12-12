@@ -114,10 +114,17 @@ ul li {
   margin: auto;
   flex: 0 1 600px;
 }
-.reg_popup_inner {
+.user-info {
   width: 100%;
   background-color: #F5F5F5;
   padding: 2em 4em;
+}
+.user-info .row.notification {
+  min-height: 70px;
+  display: flex;
+}
+.user-info h4 {
+  margin: auto;
 }
 .who_reg_item {
   text-align: center;
@@ -184,7 +191,7 @@ ul li {
 }
 
 @media (max-width: 450px) {
-  .reg_popup_inner {
+  .user-info {
     padding: 2em;
   }
   .hide_mobile {
