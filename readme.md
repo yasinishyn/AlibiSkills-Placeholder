@@ -1,19 +1,19 @@
-To add your form & sheet:
-1. Create new form docs.google.com/forms with fields text `name`, `email` and multiple choice `role` with options 'teacher' and 'student'
-2. In RESPONSES tab click green button 'View responses in Sheets' and select New Sheet to save responses.
-3. Click eye button on top of the page to open Preview Mode
-4. Open Dev Tools and find appropriate inputs
-5. Copy input `name` attributes values and replace appropriate values in `index.html`
+Після того як користувач заповнив і відправив форму, дані можна переглянути в Google Sheets тут:
+`https://docs.google.com/spreadsheets/d/1J9taZvzRYuqqm_CpW9GYuzfT69tcuSbK3yLRG9nTyDk/edit#gid=1670949304`
 
-    `<input type="text" name="entry.340286705" value="student" hidden>`
+Або ж у вигляді діаграм в Google Forms тут:
+`https://docs.google.com/forms/d/13ScCTHSliQ5XDv7KyJkO1IEqbMtDlHuRmbfHQbmD3DU/edit?edit_requested=true#responses`
 
-    `<input type="text" required placeholder="Name" value="name" name="entry.90471835" class="reg_log_input">`
+Щоб замінити гугл-форму
 
-    `<input type="email" required placeholder="Email" value="name@mail.co" name="entry.1962057131" class="reg_log_input">`
+1. Створити нову форму тут docs.google.com/forms з текстовими полями `ім'я`, `емейл` та полем `role` з варіантами відповіді 'teacher' та 'student'
+2. У вкладці Відповіді  обрати 'Переглянути відповів в Google Sheets' -> Новий документ.
+3. Відкрити попередній перегляд форми і Відкрити Dev Tools.
+4.    
+  a. Знайти поля вводу з атрибутами `name='entry.xxx'`
+  б. Замінити в `index.html` відповідні атрибути `name` для форми.
+5.    
+  a. Знайти кнопку сабміту форми. Це прихований інпут наступного вигляду `<input type="hidden" name="fbzx" value="7658006794998780417">`
+  б. Замінити в `local.js` значенні змінної `submitRef` на атрибут `value` кнопки сабміту гугл форми.
 
-6. Find in Preview submit button. Its hidden and should look like this `<input type="hidden" name="fbzx" value="7658006794998780417">`.
-Copy `value` attribute and replace submitRef in `local.js`
-
-    `submitRef = '&submit=7658006794998780417'`
-
-7. Find in Preview form action and replace `baseURL` variable in `local.js`
+6. Знайти форму і замінии змінну `baseURL` в `local.js` на значення її атрибуту `action`
