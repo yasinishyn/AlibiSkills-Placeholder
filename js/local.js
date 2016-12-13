@@ -26,6 +26,7 @@ $(document).ready(function() {
   }
 
   var validateField = function(field) {
+    console.log('validateField');
     var input = field.find('input');
     var value = input.val();
     var type = input.attr('type');
@@ -62,9 +63,12 @@ $(document).ready(function() {
     return isValid;
   }
 
-  $('#user-name, #user-email').on('change blur keyup input', 'input', function(e) {
-    validateField($(this).closest('div'));
-  });
+  $('#user-name, #user-email').on('keyup', 'input',
+    $.debounce(350, function (e) {
+      validateField($(e.target).closest('div'));
+    })
+  );
+
 
   $('.user-info').submit(function(e) {
     e.preventDefault();
