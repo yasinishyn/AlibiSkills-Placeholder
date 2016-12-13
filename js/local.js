@@ -2,12 +2,12 @@ $(document).ready(function() {
   $('#i_student').click(function() {
       $('#i_teacher').removeClass('selected');
       $(this).addClass('selected');
-      $("[name='entry.340286705']").val('student');
+      $('#user-role').val('student');
   });
   $('#i_teacher').click(function() {
       $('#i_student').removeClass('selected');
       $(this).addClass('selected');
-      $("[name='entry.340286705']").val('teacher');
+      $('#user-role').val('teacher');
   });
 
   var successHandler = function() {
@@ -79,8 +79,8 @@ $(document).ready(function() {
 
     if (isValidForm.call(form)) {
       var data = form.serialize();
-      var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLScNdo-dx4tDXom1aw6gV85-sa5yXZTQN9rkQeZRLdHzC0EOJw/formResponse?';
-      var submitRef = '&submit=7658006794998780417';
+      var baseURL = 'https://docs.google.com/forms/d/e/1FAIpQLSeqv-Oo1Mq7qZmLWUB06T4HI-1RS_80IiRCijg23U1wa-CbPQ/formResponse?';
+      var submitRef = '&submit=8245421178249579393';
       var submitURL = (baseURL + data + submitRef);
 
       $.ajax({
